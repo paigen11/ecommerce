@@ -1,0 +1,97 @@
+//  @import "compass/utilities";
+//  @import "compass/css3";
+
+// // CONFIGS
+// // -------------------------------
+// @import "configs/variables";
+
+// // LAYOUT
+// // -------------------------------
+// @import "layout/layout";
+// @import "layout/header";
+// @import "layout/footer";
+
+// // VIEWS
+// // -------------------------------
+// @import "views/home";
+// @import "views/subscribe";
+// @import "views/choices";
+// @import "views/delivery";
+// @import "views/payment";
+// @import "views/account";
+
+body{
+	background-color: #DCDCDC;
+}
+
+h1{
+	text-align: center;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+p{
+	display: inline-block;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+#floating-panel {
+position: absolute;
+top: 10px;
+left: 5%;
+z-index: 5;
+background-color: #fff;
+padding: 5px;
+border: 1px solid #999;
+text-align: center;
+font-family: 'Droid Sans', sans-serif;
+line-height: 30px;
+padding-left: 10px;
+}
+
+#map{
+	height: 99vh;
+	width: 75%;
+	float: left;
+}
+
+.table{
+	width: 25%;
+	overflow: scroll;
+	height: 90vh;
+}
+table{
+	margin:auto;
+	text-align: left;
+	font-family: 'Droid Sans', sans-serif;
+	background-color: white;
+	& td, th{
+		padding-left: 10px;
+	}
+}
+
+#left-panel{
+	font-family: 'Droid Sans', sans-serif;
+	line-height: 30px;
+	padding-left: 10px;
+  	height: auto;
+    float: left;
+    width: 800px;
+    overflow: auto;
+    & select{
+    	width: 100%;
+    	font-size: 15px;
+    }
+    & input{
+    	font-size: 15px;
+    }
+    & i{
+    	font-size: 12px;
+    }
+
+}
+
+#left-panel .adp table{
+	font-family: 'Droid Sans', sans-serif;
+}
+
+
