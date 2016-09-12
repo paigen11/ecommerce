@@ -1,0 +1,70 @@
+/* line 1, ../compass/sass/styles.scss */
+body {
+  background-color: white;
+}
+
+/* line 5, ../compass/sass/styles.scss */
+.intro {
+  padding-top: 70px;
+}
+
+/* line 9, ../compass/sass/styles.scss */
+.jumbotron {
+  background-image: url(../compass/images/table-flowers.jpg);
+  background-size: cover;
+}
+/* line 12, ../compass/sass/styles.scss */
+.jumbotron h1, .jumbotron p {
+  color: white;
+}
+
+/* line 17, ../compass/sass/styles.scss */
+.choose-flowers {
+  background-image: url(../compass/images/flower-fields.png);
+  background-size: cover;
+  height: 300px;
+}
+/* line 21, ../compass/sass/styles.scss */
+.choose-flowers h3, .choose-flowers p {
+  color: white;
+}
+
+/* line 26, ../compass/sass/styles.scss */
+.flower-choose {
+  padding-bottom: 30px;
+}
+
+/* line 30, ../compass/sass/styles.scss */
+.flower-weekly, .flower-monthly {
+  border: solid black 1px;
+}
+/* line 32, ../compass/sass/styles.scss */
+.flower-weekly h4, .flower-monthly h4 {
+  margin: 10px;
+}
+/* line 35, ../compass/sass/styles.scss */
+.flower-weekly .flowers, .flower-monthly .flowers {
+  margin-left: 30%;
+}
+
+/* line 40, ../compass/sass/styles.scss */
+.get-flowers {
+  background-image: url(../compass/images/vase-flowers.jpg);
+  background-size: cover;
+  height: 700px;
+}
+
+/* line 46, ../compass/sass/styles.scss */
+.start {
+  height: 150px;
+}
+
+/* line 50, ../compass/sass/styles.scss */
+footer {
+  background-color: #F8F8F8;
+  height: 80px;
+}
+/* line 53, ../compass/sass/styles.scss */
+footer p {
+  line-height: 80px;
+}
