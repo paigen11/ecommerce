@@ -1,0 +1,42 @@
+.register-page{
+	background-image: url(../compass/images/register-pic.png);
+	background-size: cover;
+	margin-top: 40px;
+	height: 600px;
+}
+
+.register{
+	padding-top: 35px;
+	& h1{
+		font-family: 'Droid Serif', serif;
+	}
+}
+
+.form-group{
+	& label{
+		margin-top: 10px;
+		margin-bottom: 10px;
+		font-family: 'Crete Round', serif;
+		font-size: 20px;
+	}
+	& .box{
+		margin-top: 10px;
+		margin-bottom: 10px;
+		font-family: 'Crete Round', serif;
+		font-size: 20px;
+	}
+}
+
+.button-holder{
+	padding-top: 20px;
+	padding-left: 25px;
+	& .btn{
+		font-family: 'Crete Round', serif;
+	}
+}
+
+.exist-account p{
+	padding-top: 20px;
+	padding-left: 10px;
+	font-family: 'Crete Round', serif;
+}

@@ -1,70 +1,181 @@
-/* line 1, ../compass/sass/styles.scss */
-body {
-  background-color: white;
-}
-
-/* line 5, ../compass/sass/styles.scss */
+/* line 2, ../compass/sass/views/_main.scss */
 .intro {
-  padding-top: 70px;
+  padding-top: 85px;
 }
 
-/* line 9, ../compass/sass/styles.scss */
+/* line 6, ../compass/sass/views/_main.scss */
 .jumbotron {
-  background-image: url(../compass/images/table-flowers.jpg);
+  background-image: url(../../compass/images/table-flowers.jpg);
   background-size: cover;
 }
-/* line 12, ../compass/sass/styles.scss */
+/* line 9, ../compass/sass/views/_main.scss */
 .jumbotron h1, .jumbotron p {
   color: white;
+  font-family: 'Droid Serif', serif;
+}
+/* line 13, ../compass/sass/views/_main.scss */
+.jumbotron p {
+  padding-left: 15%;
+  padding-right: 15%;
 }
 
-/* line 17, ../compass/sass/styles.scss */
-.choose-flowers {
-  background-image: url(../compass/images/flower-fields.png);
-  background-size: cover;
-  height: 300px;
+/* line 19, ../compass/sass/views/_main.scss */
+h2 {
+  font-size: 40px;
 }
-/* line 21, ../compass/sass/styles.scss */
+
+/* line 23, ../compass/sass/views/_main.scss */
+h3 {
+  font-size: 30px;
+}
+
+/* line 27, ../compass/sass/views/_main.scss */
+p {
+  font-size: 20px;
+}
+
+/* line 31, ../compass/sass/views/_main.scss */
+.nav {
+  height: 80px;
+}
+/* line 33, ../compass/sass/views/_main.scss */
+.nav .navbar-header {
+  margin-left: 40%;
+  margin-top: -15px;
+}
+
+/* line 39, ../compass/sass/views/_main.scss */
+.choose-flowers {
+  background-image: url(../../compass/images/new-flowers.png);
+  background-size: cover;
+  height: 400px;
+}
+/* line 43, ../compass/sass/views/_main.scss */
 .choose-flowers h3, .choose-flowers p {
   color: white;
 }
+/* line 46, ../compass/sass/views/_main.scss */
+.choose-flowers p {
+  padding-top: 50px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
 
-/* line 26, ../compass/sass/styles.scss */
+/* line 53, ../compass/sass/views/_main.scss */
+.select-flowers p {
+  padding-left: 10%;
+}
+
+/* line 57, ../compass/sass/views/_main.scss */
 .flower-choose {
   padding-bottom: 30px;
 }
 
-/* line 30, ../compass/sass/styles.scss */
+/* line 61, ../compass/sass/views/_main.scss */
 .flower-weekly, .flower-monthly {
   border: solid black 1px;
 }
-/* line 32, ../compass/sass/styles.scss */
+/* line 63, ../compass/sass/views/_main.scss */
 .flower-weekly h4, .flower-monthly h4 {
   margin: 10px;
 }
-/* line 35, ../compass/sass/styles.scss */
+/* line 66, ../compass/sass/views/_main.scss */
+.flower-weekly ul, .flower-monthly ul {
+  font-size: 15px;
+}
+/* line 69, ../compass/sass/views/_main.scss */
 .flower-weekly .flowers, .flower-monthly .flowers {
   margin-left: 30%;
 }
 
-/* line 40, ../compass/sass/styles.scss */
+/* line 74, ../compass/sass/views/_main.scss */
 .get-flowers {
-  background-image: url(../compass/images/vase-flowers.jpg);
+  background-image: url(../../compass/images/vase-flowers.jpg);
   background-size: cover;
   height: 700px;
 }
+/* line 78, ../compass/sass/views/_main.scss */
+.get-flowers p {
+  padding-left: 10%;
+  padding-right: 40%;
+}
 
-/* line 46, ../compass/sass/styles.scss */
+/* line 84, ../compass/sass/views/_main.scss */
 .start {
   height: 150px;
 }
 
-/* line 50, ../compass/sass/styles.scss */
+/* line 1, ../compass/sass/views/_register.scss */
+.register-page {
+  background-image: url(../compass/images/register-pic.png);
+  background-size: cover;
+  margin-top: 40px;
+  height: 600px;
+}
+
+/* line 8, ../compass/sass/views/_register.scss */
+.register {
+  padding-top: 35px;
+}
+/* line 10, ../compass/sass/views/_register.scss */
+.register h1 {
+  font-family: 'Droid Serif', serif;
+}
+
+/* line 16, ../compass/sass/views/_register.scss */
+.form-group label {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: 'Crete Round', serif;
+  font-size: 20px;
+}
+/* line 22, ../compass/sass/views/_register.scss */
+.form-group .box {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: 'Crete Round', serif;
+  font-size: 20px;
+}
+
+/* line 30, ../compass/sass/views/_register.scss */
+.button-holder {
+  padding-top: 20px;
+  padding-left: 25px;
+}
+/* line 33, ../compass/sass/views/_register.scss */
+.button-holder .btn {
+  font-family: 'Crete Round', serif;
+}
+
+/* line 38, ../compass/sass/views/_register.scss */
+.exist-account p {
+  padding-top: 20px;
+  padding-left: 10px;
+  font-family: 'Crete Round', serif;
+}
+
+/* line 4, ../compass/sass/styles.scss */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+/* line 9, ../compass/sass/styles.scss */
+body {
+  background-color: white;
+  margin-bottom: 80px;
+  font-family: 'Crete Round', serif;
+}
+
+/* line 15, ../compass/sass/styles.scss */
 footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   background-color: #F8F8F8;
   height: 80px;
 }
-/* line 53, ../compass/sass/styles.scss */
+/* line 21, ../compass/sass/styles.scss */
 footer p {
   line-height: 80px;
 }

@@ -1,6 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='eCommerceApp'>
 <head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<title>Ecommerce Site</title>
 
 	<!-- Latest compiled and minified CSS -->
@@ -11,29 +16,48 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script src="js/angular-route.min.js"></script>
+	<script src="js/angular-cookies.min.js"></script>
+	<script type="text/javascript" src="js/mainController.js"></script>
+
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+	<link href="https://fonts.googleapis.com/css?family=Crete+Round|Droid+Serif:700" rel="stylesheet">
+
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
-<body>
+<body ng-controller='mainController'>
 <div class='container'>
 
-	<nav class='navbar navbar-default navbar-fixed-top'>
+	<nav class='nav navbar-default navbar-fixed-top'>
 		<div class='container'>
-			<div class='col-xs-4 col-xs-offset-4 text-center'>
-				<a class='navbar-brand' href='#'>Flowers Galore</a>
+			<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+        				<span class="sr-only">Toggle navigation</span>
+        				<span class="icon-bar"></span>
+       					<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+      				</button>
+					<a class='navbar-brand' href='#/'>
+						<img src='compass/images/logo.png'>
+					</a>
 			</div>
-			<div class='navbar-form navbar-right col-xs-4'>
+
+			<div id="navbar-collapse-1" class='collapse navbar-collapse navbar-form navbar-right col-xs-4'>
 				<ul class='nav navbar-nav'>
-					<li><a href='#'>Login</a></li>
-					<li><a href='#'>Register Now</a></li>
+					<li><a ng-href='#/register'>Register Now</a></li>
+					<li ng-hide><a ng-href='#/login'>Log In</a></li>
+					<li ng-hide><a ng-href='#/logout'>Log Out</a></li>
 				</ul>	
 			</div>
-		</div>
+		</div>	
 	</nav>
 
-	<div class='row intro'>
+	<div id='views' ng-view></div>
+
+	<!-- <div class='row intro'>
 		<div class='jumbotron'>
 			<h1>Is there anyone in the world who doesn't like getting flowers?</h1>
 			<p>What better way to brighten someone's day than with an unexpected bouquet of fresh, beautiful flowers?</p>
@@ -102,7 +126,7 @@
 		<div class='col-xs-12 text-center'>
 			<button type='button' class='btn btn-lg'>Start</button>
 		</div>
-	</div>
+	</div> -->
 </div>
 <footer>
 		<div class='container-fluid'>

@@ -1,0 +1,86 @@
+
+.intro{
+	padding-top: 85px;
+}
+
+.jumbotron{
+	background-image: url(../../compass/images/table-flowers.jpg);
+	background-size: cover;
+	& h1, p{
+		color: white;
+		font-family: 'Droid Serif', serif;
+	}
+	p{
+		padding-left: 15%;
+		padding-right: 15%;
+	}
+}
+
+h2{
+	font-size: 40px;
+}
+
+h3{
+	font-size: 30px;
+}
+
+p{
+	font-size: 20px;
+}
+
+.nav{
+	height: 80px;
+	& .navbar-header{
+		margin-left: 40%;
+		margin-top: -15px;
+	}
+}
+
+.choose-flowers{
+	background-image: url(../../compass/images/new-flowers.png);
+	background-size: cover;
+	height:400px;
+	& h3, p{
+		color: white;
+	}
+	p{
+		padding-top: 50px;
+		padding-left:10%;
+		padding-right:10%;
+	}
+}
+
+.select-flowers p{
+ 	padding-left:10%;
+}
+
+.flower-choose{
+	padding-bottom: 30px;
+}
+
+.flower-weekly, .flower-monthly{
+		border: solid black 1px;
+		h4{
+			margin: 10px;
+		}
+		ul{
+			font-size: 15px;
+		}
+		.flowers{
+			margin-left: 30%;
+		}
+	}
+
+.get-flowers{
+	background-image: url(../../compass/images/vase-flowers.jpg);
+	background-size: cover;
+	height:700px;
+	& p{
+		padding-left: 10%;
+		padding-right: 40%;
+	}
+}
+
+.start{
+	height: 150px;
+}
