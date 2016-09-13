@@ -47,94 +47,25 @@
 
 			<div id="navbar-collapse-1" class='collapse navbar-collapse navbar-form navbar-right col-xs-4'>
 				<ul class='nav navbar-nav'>
-					<li><a ng-href='#/register'>Register Now</a></li>
-					<li ng-hide><a ng-href='#/login'>Log In</a></li>
-					<li ng-hide><a ng-href='#/logout'>Log Out</a></li>
+					<li ng-hide='hi'><a ng-href='#/register'>Register Now</a></li>
+					<li ng-hide='hi'><a ng-href='#/login'>Log In</a></li>
+					<li ng-show='hi'><a ng-href='#/logout'>Log Out</a></li>
+					<li ng-show='hi'>Hi {{username}}</li>
 				</ul>	
 			</div>
 		</div>	
 	</nav>
 
 	<div id='views' ng-view></div>
-
-	<!-- <div class='row intro'>
-		<div class='jumbotron'>
-			<h1>Is there anyone in the world who doesn't like getting flowers?</h1>
-			<p>What better way to brighten someone's day than with an unexpected bouquet of fresh, beautiful flowers?</p>
-		</div>
-	</div>
-
-	<div class='row instructions'>
-		<div class='col-xs-12 text-center'>
-			<h2>How It Works</h2>
-		</div>
-	</div>
-
-	<div class='row choose-flowers'>
-		<div class='col-xs-12 text-center'>
-			<h3>We Source the Flowers</h3>
-		</div>
-		<div class='col-xs-12'>
-			<p>Our flowers are sourced from special flower growers in South America. They're harvested in an eco-friendly way, and immediately sent to the US where our expert floral designers create beautiful bouquets for our customers.</p>
-		</div>
-	</div>
-
-	<div class='row select-flowers'>
-		<div class='col-xs-12 text-center'>
-			<h3>You Choose Your Flower Frequency</h3>
-		</div>
-		<div class='col-xs-12'>
-			<p>We offer two flower packages to choose from: weekly or monthly.</p>
-		</div>
-		<div class='col-sm-5 col-sm-offset-1 flower-choose'>
-			<div class='flower-weekly'>
-				<h4>Weekly Flowers</h4>
-				<ul>
-					<li>Receive fresh flowers delivered each Monday</li>
-					<li>Flowers are always in season and fresh</li>
-					<li>Guaranteed to last until your next arrangement arrives</li>
-				</ul>
-				<img class='flowers' src="compass/images/flower-bouquet.jpeg">
-			</div>
-		</div>
-		<div class='col-sm-5'>
-			<div class='flower-monthly'>
-				<h4>Monthly Flowers</h4>
-				<ul>
-					<li>Receive fresh flowers delivered the first Monday of the month</li>
-					<li>Flowers are always in season and fresh</li>
-					<li>Guaranteed to brighten someone's day</li>
-				</ul>
-				<img class='flowers' src="compass/images/flower-bouquet2.jpeg">
-			</div>
-		</div>
-	</div>
-
-	<div class='row get-flowers'>
-		<div class='col-xs-12 text-center'>
-			<h3>Enjoy Your Flowers</h3>
-		</div>
-		<div class='col-xs-12'>
-			<p>Once you've decided on your flower frequency, you can expect your first flower arrangement the following Monday. Enjoy!</p>
-		</div>
-	</div>
-
-	<div class='row start'>
-	<div class='col-xs-12 text-center'>
-			<h3>Ready to get started?</h3>
-		</div>
-		<div class='col-xs-12 text-center'>
-			<button type='button' class='btn btn-lg'>Start</button>
-		</div>
-	</div> -->
 </div>
+
 <footer>
-		<div class='container-fluid'>
-	        <div class="col-xs-12 text-center">
-	          <p>Made in Atlanta | Copyright &copy;2016</p>
-	        </div>
-		</div>
-	</footer>
+	<div class='container-fluid'>
+        <div class="col-xs-12 text-center">
+          <p>Made in Atlanta | Copyright &copy;2016</p>
+        </div>
+	</div>
+</footer>
 
 </body>
 </html>

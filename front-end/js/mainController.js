@@ -1,5 +1,5 @@
 var ecommerceApp = angular.module('eCommerceApp', ['ngRoute', 'ngCookies']);
-ecommerceApp.controller('mainController', function($scope, $http, $location, $cookies){
+ecommerceApp.controller('mainController', function($scope, $rootScope, $http, $timeout, $location, $cookies){
 	
 	var apiPath = 'http://localhost:3000';
 
@@ -14,13 +14,39 @@ ecommerceApp.controller('mainController', function($scope, $http, $location, $co
 		}).then(function successCallback(response){
 			console.log(response);
 			if(response.data.message == 'added'){
-				$location.path('/options');
+				$scope.welcome = true;
+				$rootScope.hi = true;
+				$rootScope.hi.username = $scope.username;
+				$timeout(function(){
+					$location.path('/options');
+				}, 2500);
+			}
+		}, function errorCallback(response){
+			console.log(response);
+		})
+	};
+
+	$scope.login = function(){
+		$http.post(apiPath + '/login', {
+			username: $scope.username,
+			password: $scope.password
+		}).then(function successCallback(response){
+			console.log(response);
+			if(response.data.success == 'userFound'){
+				$scope.welcome = true;
+				$rootScope.hi = true;
+				$rootScope.hi.username = $scope.username;
+				$timeout(function(){
+					$location.path('/options');
+				}, 2500);
 			}
 		}, function errorCallback(response){
 			console.log(response);
 		})
 	};
 });
+
+	
 
 //set up routes using routes module
 ecommerceApp.config(function($routeProvider){

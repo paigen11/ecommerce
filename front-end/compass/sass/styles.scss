@@ -1,9 +1,16 @@
 @import 'views/main';
 @import 'views/register';
+@import 'views/login';
 
 html{
 	position: relative;
 	min-height:100%;
+}
+
+.navbar-header{
+	& button.navbar-toggle.collapsed{
+	margin-top: 35px;
+	}
 }
 
 body{

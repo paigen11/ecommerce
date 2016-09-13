@@ -45,17 +45,17 @@ router.post('/login', function(req, res, next){
 				if(loginResult){
 					//the password is correct, log them in
 					res.json({
-						success:'userFound';
-					})
+						success:'userFound'
+					});
 				}else{
 					//hashes did not match or the doc wasn't found. goodbye
 					res.json({
-						failure: 'badPassword';
-					})
+						failure: 'badPassword'
+					});
 				}
 			}
 		}
 	)
-})
+});
 
 module.exports = router;

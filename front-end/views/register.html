@@ -38,17 +38,26 @@
 						<input type='email' ng-model='email' placeholder='Enter your email' minlength='4' maxlength='50' class='form-control'>
 					</div>
 				</div>
+				
 				<div class='row'>
 					<div class='button-holder col-sm-12'>
 						<button type='submit' class='btn btn-success'>Submit</button>
 					</div>
 				</div>
-				<div class='row'>	
-					<div class='exist-account col-sm-12'>
-						<p>Already have an account? <a href='/#/login'>Log In</a>.</p>
-					</div>
-				</div>		
 			</form>
+				
+			<div class='row'>	
+				<div class='exist-account col-sm-12'>
+					<p>Already have an account? <a href='/#/login'>Log In</a>.</p>
+				</div>
+			</div>	
+
+			<div class='row welcome' ng-show="welcome">
+				<div class='col-sm-4'>
+					<h4>Welcome to Flowers Galore, {{username}}.<br> Thanks for registering with us.</h4>
+				</div>
+			</div>	
+			
 		</div>
 	</div>
 </div>
