@@ -232,18 +232,48 @@ html {
 }
 
 /* line 11, ../compass/sass/styles.scss */
-.navbar-header button.navbar-toggle.collapsed {
+.navbar-header button.navbar-toggle {
+  margin-top: 35px;
+}
+/* line 14, ../compass/sass/styles.scss */
+.navbar-header button.navbar-collapse {
   margin-top: 35px;
 }
 
-/* line 16, ../compass/sass/styles.scss */
+/* line 19, ../compass/sass/styles.scss */
+#navbar-collapse-1.navbar-collapse {
+  border: none;
+}
+
+/* line 23, ../compass/sass/styles.scss */
+#navbar-collapse-1.navbar-collapse.collapse.in {
+  width: 200px;
+  float: right;
+  background-color: white;
+  border: #e7e7e7 1px solid;
+  border-radius: 5px;
+  height: 140px;
+}
+
+/* line 32, ../compass/sass/styles.scss */
+.navbar-right li {
+  padding-top: 15px;
+}
+
+/* line 36, ../compass/sass/styles.scss */
+.username {
+  padding-top: 15px;
+  color: #737373;
+}
+
+/* line 41, ../compass/sass/styles.scss */
 body {
   background-color: white;
   margin-bottom: 80px;
   font-family: 'Crete Round', serif;
 }
 
-/* line 22, ../compass/sass/styles.scss */
+/* line 47, ../compass/sass/styles.scss */
 footer {
   position: absolute;
   bottom: 0;
@@ -251,7 +281,7 @@ footer {
   background-color: #F8F8F8;
   height: 80px;
 }
-/* line 28, ../compass/sass/styles.scss */
+/* line 53, ../compass/sass/styles.scss */
 footer p {
   line-height: 80px;
 }

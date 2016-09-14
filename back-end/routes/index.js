@@ -45,8 +45,10 @@ router.post('/login', function(req, res, next){
 				if(loginResult){
 					//the password is correct, log them in
 					res.json({
-						success:'userFound'
+						success:'userFound',
+						username: req.body.username
 					});
+					console.log(req.body.username);
 				}else{
 					//hashes did not match or the doc wasn't found. goodbye
 					res.json({

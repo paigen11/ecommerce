@@ -8,9 +8,34 @@ html{
 }
 
 .navbar-header{
-	& button.navbar-toggle.collapsed{
+	& button.navbar-toggle{
 	margin-top: 35px;
 	}
+	& button.navbar-collapse{
+	margin-top: 35px;
+	}
+}
+
+#navbar-collapse-1.navbar-collapse{
+	border: none;
+}
+
+#navbar-collapse-1.navbar-collapse.collapse.in{
+	width: 200px;
+    float: right;
+    background-color: white;
+    border: #e7e7e7 1px solid;
+    border-radius: 5px;
+    height: 140px;
+}
+
+.navbar-right li{
+	padding-top: 15px;
+}
+
+.username{
+	padding-top: 15px;
+	color: hsla(0,0%,45%,1);
 }
 
 body{

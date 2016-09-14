@@ -35,7 +35,8 @@ ecommerceApp.controller('mainController', function($scope, $rootScope, $http, $t
 			if(response.data.success == 'userFound'){
 				$scope.welcome = true;
 				$rootScope.hi = true;
-				$rootScope.hi.username = $scope.username;
+				$rootScope.username = response.data.username;
+				console.log($rootScope.username);
 				$timeout(function(){
 					$location.path('/options');
 				}, 2500);
