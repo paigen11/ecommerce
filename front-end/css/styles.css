@@ -281,7 +281,7 @@ p {
 }
 
 /* line 46, ../compass/sass/views/_options.scss */
-.choice h3 {
+.choice h5 {
   padding-left: 25px;
   border: 1px solid grey;
   background-color: white;
@@ -311,27 +311,58 @@ p {
   color: black;
 }
 
-/* line 7, ../compass/sass/styles.scss */
+/* line 19, ../compass/sass/views/_delivery.scss */
+.welcome h5 {
+  padding-left: 25px;
+  border: 1px solid grey;
+  background-color: white;
+  border-radius: 5px;
+  padding: 15px;
+  color: grey;
+}
+
+/* line 1, ../compass/sass/views/_payment.scss */
+.payment {
+  background-image: url(../compass/images/payment-page.jpg);
+  background-size: cover;
+  margin-top: 80px;
+}
+/* line 5, ../compass/sass/views/_payment.scss */
+.payment h1, .payment h3 {
+  font-family: 'Droid Serif', serif;
+}
+
+/* line 11, ../compass/sass/views/_payment.scss */
+.form-group.pay h3 {
+  margin-left: 32px;
+}
+/* line 14, ../compass/sass/views/_payment.scss */
+.form-group.pay label {
+  color: black;
+  font-family: 'Crete Round', serif;
+}
+
+/* line 8, ../compass/sass/styles.scss */
 html {
   position: relative;
   min-height: 100%;
 }
 
-/* line 13, ../compass/sass/styles.scss */
+/* line 14, ../compass/sass/styles.scss */
 .navbar-header button.navbar-toggle {
   margin-top: 35px;
 }
-/* line 16, ../compass/sass/styles.scss */
+/* line 17, ../compass/sass/styles.scss */
 .navbar-header button.navbar-collapse {
   margin-top: 35px;
 }
 
-/* line 21, ../compass/sass/styles.scss */
+/* line 22, ../compass/sass/styles.scss */
 #navbar-collapse-1.navbar-collapse {
   border: none;
 }
 
-/* line 25, ../compass/sass/styles.scss */
+/* line 26, ../compass/sass/styles.scss */
 #navbar-collapse-1.navbar-collapse.collapse.in {
   width: 200px;
   float: right;
@@ -341,31 +372,32 @@ html {
   height: 140px;
 }
 
-/* line 34, ../compass/sass/styles.scss */
+/* line 35, ../compass/sass/styles.scss */
 .navbar-right li {
   padding-top: 15px;
 }
 
-/* line 38, ../compass/sass/styles.scss */
+/* line 39, ../compass/sass/styles.scss */
 .username {
   padding-top: 15px;
   color: #737373;
 }
 
-/* line 43, ../compass/sass/styles.scss */
+/* line 44, ../compass/sass/styles.scss */
 body {
   background-color: white;
   margin-bottom: 80px;
   font-family: 'Crete Round', serif;
+  padding-bottom: 70px;
 }
 
-/* line 49, ../compass/sass/styles.scss */
+/* line 51, ../compass/sass/styles.scss */
 .navbar-fixed-bottom {
   width: 100%;
   background-color: #F8F8F8;
-  height: 80px;
+  height: 50px;
 }
-/* line 53, ../compass/sass/styles.scss */
+/* line 55, ../compass/sass/styles.scss */
 .navbar-fixed-bottom p {
-  line-height: 80px;
+  line-height: 50px;
 }

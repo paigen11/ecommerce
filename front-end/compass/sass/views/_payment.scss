@@ -1,0 +1,19 @@
+.payment{
+	background-image: url(../compass/images/payment-page.jpg);
+	background-size: cover;
+	margin-top: 80px;
+	& h1, h3{
+		font-family: 'Droid Serif', serif;
+	}
+}
+
+.form-group.pay{
+	& h3{
+		margin-left: 32px;
+	}
+	& label{
+	color: black;
+	font-family: 'Crete Round', serif;
+	}
+}
+

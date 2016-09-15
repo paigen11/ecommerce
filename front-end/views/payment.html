@@ -1,0 +1,56 @@
+<div class='payment container'>
+	<div class='row'>
+		<div class='col-xs-12'>
+			<h1>Review & Pay for Your Order</h1>
+		</div>
+	</div>
+
+	<div class='row'>
+		<form class='form-horizontal'>
+			<div class='form-group pay'>
+				<h3>Flower Order Details</h3>
+			</div>
+			<div class='form-group pay'>
+				<label for='frequency' class='col-sm-2 control-label'>Delivery Frequency: </label>
+				<div ng-model='frequency'>{{frequency}}</div>
+			</div>
+
+			<div class='form-group pay'>
+				<h3>Shipping Details</h3>
+			</div>
+			<div class='form-group pay'>
+				<label for='fullName' class='col-sm-2 control-label'>Full Name: </label>
+				<div ng-model='fullName'>{{fullName}}</div>
+			</div>
+			<div class='form-group pay'>
+				<label for='address1' class='col-sm-2 control-label'>Address: </label>
+				<div ng-model='address1'>{{address1}}</div>
+			</div>
+			<div class='form-group pay'>
+				<label for='address2' class='col-sm-2 control-label'>Address 2: </label>
+				<div ng-model='address2'>{{address2}}</div>
+			</div>
+			<div class='form-group pay'>
+				<label for='city' class='col-sm-2 control-label'>City: </label>
+				<div ng-model='city'>{{city}}</div>
+			</div>
+			<div class='form-group pay'>
+				<label for='state' class='col-sm-2 control-label'>State: </label>
+				<div ng-model='state'>{{state}}</div>
+			</div>
+			<div class='form-group pay'>
+				<label for='zipCode' class='col-sm-2 control-label'>Zip Code: </label>
+				<div ng-model='zipCode'>{{zipCode}}</div>
+			</div>
+
+			<div class='form-group pay'>
+				<h3>Grand Total</h3>
+			</div>
+			<div class='form-group pay'>
+				<label for='total' class='col-sm-2 control-label'>Total: </label>
+				<div ng-model='total'>{{total}}</div>
+			</div>
+
+		</form>
+	</div>
+</div>
