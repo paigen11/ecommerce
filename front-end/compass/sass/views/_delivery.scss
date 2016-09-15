@@ -1,4 +1,17 @@
-// -------------------------------
-// _DELIVERY.SCSS
-// Delivery View Styles
-// -------------------------------
+.delivery{
+	background-image: url(../compass/images/delivery-page.jpeg);
+	background-size: cover;
+	padding-top: 90px;
+	height: 900px;
+	& h1, p{
+		
+		font-family: 'Crete Round', serif;
+	}
+	& h1{
+		font-family: 'Droid Serif', serif;
+	}
+}
+
+.form-group.address label{
+	color: black;
+}

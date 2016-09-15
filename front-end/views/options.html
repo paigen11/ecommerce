@@ -1,0 +1,79 @@
+<div class='container options-page'>
+	<div class='row'>
+		<div class='options-title col-xs-12'>
+			<h1>Select Your Flower Frequency</h1>
+			<p>Shipping is always free, and you can change your plan at any time.</p>
+		</div>
+	</div>
+
+	<div class='row select-flowers-plans'>
+		<div class='col-sm-5 col-sm-offset-1 flower-choose'>
+			<div class='flower-weekly' ng-click='flowersWeekly()'>
+				<h4>Weekly Flowers</h4>
+				<ul>
+					<li>New flowers each Monday</li>
+					<li>Fresh, seasonal arrangements</li>
+					<li>Guaranteed to last until the next arrangement is delivered</li>
+					<li>Monthly total: $140</li>
+				</ul>
+				<img class='flowers' src="compass/images/flower-bouquet.jpeg">
+				<br>
+				<button type='click' class='btn btn-primary'>Order</button>
+				<p>Shipping is free. Change plans at any time.</p>
+			</div>
+		</div>
+		<div class='col-sm-5'>
+			<div class='flower-monthly' ng-click='flowersMonthly()'>
+				<h4>Monthly Flowers</h4>
+				<ul>
+					<li>New flowers the first Monday of the month</li>
+					<li>Fresh, seasonal arrangement</li>
+					<li>Guaranteed to brighten someone's day</li>
+					<li>Monthly Total: $50</li>
+				</ul>
+				<img class='flowers' src="compass/images/flower-bouquet2.jpeg">
+				<br>
+				<button type='click' class='btn btn-primary'>Order</button>
+				<p>Shipping is free. Change plans at any time.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class='row choice' ng-show="choiceMade">
+		<div class='col-sm-4'>
+			<h3>Great choice! Now let's get your details.</h3>
+		</div>
+	</div>	
+
+ 	<!-- for customized flower orders. to do later -->
+	<!-- <div class='row select-flowers-custom'>
+		<div class='col-sm-10 col-sm-offset-1 flower-title'>
+			<h2>Want to customize your flower order? We can handle that!</h2>
+		</div>
+		<div class='row frequency'>
+			<div class='col-sm-6 col-sm-offset-3'>
+				<div class='dropdown'>
+					<button class='btn btn-default dropdown-toggle' type='button' id='dropdownFrequency' data-toggle='dropdown' aria-haspopup='true' aria-expanded='true'>
+					Frequency
+					<span class='caret'></span>
+					</button>
+					<ul class='dropdown-menu' aria-labelledby='dropdownFrequency'>
+						<li><a>Every Week</a></li>
+						<li><a>Every Two Weeks</a></li>
+						<li><a>Once A Month</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class='row type'>
+			<div class='col-sm-6 col-sm-offset-3'>
+			</div>
+		</div>
+		<div class='row total'>
+			<div class='col-sm-6 col-sm-offset-3'>
+			</div>
+		</div>
+		<button type='button' class='btn btn-primary'>Order</button>
+		<p>Shipping is free. Change plans at any time.</p>
+	</div> -->
+</div>

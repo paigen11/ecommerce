@@ -1,0 +1,66 @@
+<div class='container delivery'>
+	<div class='row'>
+		<div class='delivery-title col-sm-12'>
+			<h1>Delivery Page</h1>
+		</div>
+	
+	<div class='col-xs-12 col-md-4 col-md-offset-1'>
+			<form ng-submit='address()' id='address-form'>
+				<div class='form-group address'>
+					<label>
+						Full name:
+					</label>
+					<div>
+						<input type='text' ng-model='fullName' required='required' placeholder='Enter full name' minlength='4' maxlength='50' class='form-control'>
+					</div>
+				</div>	
+				<div class='form-group address'>
+					<label>
+						Address line 1:
+					</label>
+					<div>
+						<input type='text' ng-model='address1' required='required' placeholder='Apartment, suite, building, unit, floor, etc.' minlength='4' maxlength='50' class='form-control'>
+					</div>
+				</div>	
+				<div class='form-group address'>
+					<label>
+						Address line 2:
+					</label>
+					<div>
+						<input type='text' ng-model='address2' minlength='4' maxlength='50' class='form-control'>
+					</div>
+				</div>	
+				<div class='form-group address'>
+					<label>
+						City:
+					</label>
+					<div>
+						<input type='text' ng-model='city' required='required' placeholder='Enter city' minlength='4' maxlength='50' class='form-control'>
+					</div>
+				</div>
+				<div class='form-group address'>
+					<label>
+						State:
+					</label>
+					<div>
+						<input type='text' ng-model='state' required='required' placeholder='Enter state' minlength='4' maxlength='50' class='form-control'>
+					</div>
+				</div>
+				<div class='form-group address'>
+					<label>
+						Zip code:
+					</label>
+					<div>
+						<input type='text' ng-model='zipCode' required='required' placeholder='Enter zip' minlength='4' maxlength='50' class='form-control'>
+					</div>
+				</div>
+				
+				<div class='row'>
+					<div class='button-holder col-xs-12 col-md-4 col-md-offset-4'>
+						<button type='submit' class='btn btn-success'>Submit</button>
+					</div>
+				</div>
+			</form>
+		</div>	
+	</div>		
+</div>

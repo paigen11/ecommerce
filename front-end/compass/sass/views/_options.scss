@@ -1,0 +1,54 @@
+.options-page{
+	background-image: url(../compass/images/options-pic.jpeg);
+	background-size: cover;
+	padding-top: 90px;
+	height: 800px;
+	& h1, p{
+		color: white;
+		font-family: 'Crete Round', serif;
+	}
+	& h1{
+		font-family: 'Droid Serif', serif;
+	}
+}
+
+@media screen and (max-width: 767px){
+	.options-page{
+		height: auto;
+	}
+	.flower-monthly{
+		margin-bottom: 20px;
+	}
+}
+
+.flower-weekly, .flower-monthly{
+	background-color: white;
+	border-radius: 5px;
+	& button{
+		margin-left: 40%;
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+	& p{
+		padding-left: 15px;
+		color: black;
+		text-align:center;
+		font-size: 12px;
+	}
+	& li{
+		font-size: 15px;
+	}
+	& ul{
+		font-size: 24px;
+	}
+}
+
+.choice h3{
+	padding-left: 25px;
+	border: 1px solid grey;
+	background-color: white;
+	border-radius: 5px;
+	padding: 15px;
+	color: grey;
+
+}

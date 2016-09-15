@@ -225,27 +225,113 @@ p {
   color: grey;
 }
 
-/* line 5, ../compass/sass/styles.scss */
+/* line 1, ../compass/sass/views/_options.scss */
+.options-page {
+  background-image: url(../compass/images/options-pic.jpeg);
+  background-size: cover;
+  padding-top: 90px;
+  height: 800px;
+}
+/* line 6, ../compass/sass/views/_options.scss */
+.options-page h1, .options-page p {
+  color: white;
+  font-family: 'Crete Round', serif;
+}
+/* line 10, ../compass/sass/views/_options.scss */
+.options-page h1 {
+  font-family: 'Droid Serif', serif;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 16, ../compass/sass/views/_options.scss */
+  .options-page {
+    height: auto;
+  }
+
+  /* line 19, ../compass/sass/views/_options.scss */
+  .flower-monthly {
+    margin-bottom: 20px;
+  }
+}
+/* line 24, ../compass/sass/views/_options.scss */
+.flower-weekly, .flower-monthly {
+  background-color: white;
+  border-radius: 5px;
+}
+/* line 27, ../compass/sass/views/_options.scss */
+.flower-weekly button, .flower-monthly button {
+  margin-left: 40%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+/* line 32, ../compass/sass/views/_options.scss */
+.flower-weekly p, .flower-monthly p {
+  padding-left: 15px;
+  color: black;
+  text-align: center;
+  font-size: 12px;
+}
+/* line 38, ../compass/sass/views/_options.scss */
+.flower-weekly li, .flower-monthly li {
+  font-size: 15px;
+}
+/* line 41, ../compass/sass/views/_options.scss */
+.flower-weekly ul, .flower-monthly ul {
+  font-size: 24px;
+}
+
+/* line 46, ../compass/sass/views/_options.scss */
+.choice h3 {
+  padding-left: 25px;
+  border: 1px solid grey;
+  background-color: white;
+  border-radius: 5px;
+  padding: 15px;
+  color: grey;
+}
+
+/* line 1, ../compass/sass/views/_delivery.scss */
+.delivery {
+  background-image: url(../compass/images/delivery-page.jpeg);
+  background-size: cover;
+  padding-top: 90px;
+  height: 900px;
+}
+/* line 6, ../compass/sass/views/_delivery.scss */
+.delivery h1, .delivery p {
+  font-family: 'Crete Round', serif;
+}
+/* line 10, ../compass/sass/views/_delivery.scss */
+.delivery h1 {
+  font-family: 'Droid Serif', serif;
+}
+
+/* line 15, ../compass/sass/views/_delivery.scss */
+.form-group.address label {
+  color: black;
+}
+
+/* line 7, ../compass/sass/styles.scss */
 html {
   position: relative;
   min-height: 100%;
 }
 
-/* line 11, ../compass/sass/styles.scss */
+/* line 13, ../compass/sass/styles.scss */
 .navbar-header button.navbar-toggle {
   margin-top: 35px;
 }
-/* line 14, ../compass/sass/styles.scss */
+/* line 16, ../compass/sass/styles.scss */
 .navbar-header button.navbar-collapse {
   margin-top: 35px;
 }
 
-/* line 19, ../compass/sass/styles.scss */
+/* line 21, ../compass/sass/styles.scss */
 #navbar-collapse-1.navbar-collapse {
   border: none;
 }
 
-/* line 23, ../compass/sass/styles.scss */
+/* line 25, ../compass/sass/styles.scss */
 #navbar-collapse-1.navbar-collapse.collapse.in {
   width: 200px;
   float: right;
@@ -255,33 +341,31 @@ html {
   height: 140px;
 }
 
-/* line 32, ../compass/sass/styles.scss */
+/* line 34, ../compass/sass/styles.scss */
 .navbar-right li {
   padding-top: 15px;
 }
 
-/* line 36, ../compass/sass/styles.scss */
+/* line 38, ../compass/sass/styles.scss */
 .username {
   padding-top: 15px;
   color: #737373;
 }
 
-/* line 41, ../compass/sass/styles.scss */
+/* line 43, ../compass/sass/styles.scss */
 body {
   background-color: white;
   margin-bottom: 80px;
   font-family: 'Crete Round', serif;
 }
 
-/* line 47, ../compass/sass/styles.scss */
-footer {
-  position: absolute;
-  bottom: 0;
+/* line 49, ../compass/sass/styles.scss */
+.navbar-fixed-bottom {
   width: 100%;
   background-color: #F8F8F8;
   height: 80px;
 }
 /* line 53, ../compass/sass/styles.scss */
-footer p {
+.navbar-fixed-bottom p {
   line-height: 80px;
 }

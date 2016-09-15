@@ -1,6 +1,8 @@
 @import 'views/main';
 @import 'views/register';
 @import 'views/login';
+@import 'views/options';
+@import 'views/delivery';
 
 html{
 	position: relative;
@@ -44,9 +46,7 @@ body{
 	font-family: 'Crete Round', serif;
 }
 
-footer{
-	position: absolute;
-	bottom: 0;
+.navbar-fixed-bottom{
 	width: 100%;
 	background-color: #F8F8F8;
 	height: 80px;
