@@ -92,15 +92,18 @@ p {
 .get-flowers {
   background-image: url(../../compass/images/vase-flowers.jpg);
   background-size: cover;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center;
   height: 700px;
 }
-/* line 78, ../compass/sass/views/_main.scss */
+/* line 81, ../compass/sass/views/_main.scss */
 .get-flowers p {
   padding-left: 10%;
   padding-right: 40%;
 }
 
-/* line 84, ../compass/sass/views/_main.scss */
+/* line 87, ../compass/sass/views/_main.scss */
 .start {
   height: 150px;
 }
@@ -332,37 +335,88 @@ p {
   font-family: 'Droid Serif', serif;
 }
 
-/* line 11, ../compass/sass/views/_payment.scss */
+@media screen and (max-width: 767px) {
+  /* line 11, ../compass/sass/views/_payment.scss */
+  label {
+    margin-left: 3%;
+  }
+
+  /* line 14, ../compass/sass/views/_payment.scss */
+  p {
+    margin-left: 5%;
+  }
+}
+/* line 20, ../compass/sass/views/_payment.scss */
 .form-group.pay h3 {
   margin-left: 32px;
 }
-/* line 14, ../compass/sass/views/_payment.scss */
-.form-group.pay label {
+/* line 23, ../compass/sass/views/_payment.scss */
+.form-group.pay label, .form-group.pay p {
   color: black;
   font-family: 'Crete Round', serif;
 }
+/* line 27, ../compass/sass/views/_payment.scss */
+.form-group.pay p {
+  margin-top: 18px;
+}
 
-/* line 8, ../compass/sass/styles.scss */
+/* line 32, ../compass/sass/views/_payment.scss */
+.button-holder {
+  margin-bottom: 25px;
+}
+
+/* line 36, ../compass/sass/views/_payment.scss */
+.paidFor, .payFor {
+  padding-left: 25px;
+  border: 1px solid grey;
+  background-color: white;
+  border-radius: 5px;
+  padding: 15px;
+  color: grey;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+/* line 1, ../compass/sass/views/_receipt.scss */
+.receipt {
+  background-image: url(../compass/images/receipt-page.jpg);
+  background-size: cover;
+  margin-top: 80px;
+  height: 800px;
+}
+/* line 6, ../compass/sass/views/_receipt.scss */
+.receipt h1 {
+  font-family: 'Droid Serif', serif;
+  color: white;
+}
+/* line 10, ../compass/sass/views/_receipt.scss */
+.receipt h3 {
+  color: white;
+  font-family: 'Crete Round', serif;
+}
+
+/* line 9, ../compass/sass/styles.scss */
 html {
   position: relative;
   min-height: 100%;
 }
 
-/* line 14, ../compass/sass/styles.scss */
+/* line 15, ../compass/sass/styles.scss */
 .navbar-header button.navbar-toggle {
   margin-top: 35px;
 }
-/* line 17, ../compass/sass/styles.scss */
+/* line 18, ../compass/sass/styles.scss */
 .navbar-header button.navbar-collapse {
   margin-top: 35px;
 }
 
-/* line 22, ../compass/sass/styles.scss */
+/* line 23, ../compass/sass/styles.scss */
 #navbar-collapse-1.navbar-collapse {
   border: none;
 }
 
-/* line 26, ../compass/sass/styles.scss */
+/* line 27, ../compass/sass/styles.scss */
 #navbar-collapse-1.navbar-collapse.collapse.in {
   width: 200px;
   float: right;
@@ -372,32 +426,40 @@ html {
   height: 140px;
 }
 
-/* line 35, ../compass/sass/styles.scss */
+/* line 36, ../compass/sass/styles.scss */
 .navbar-right li {
   padding-top: 15px;
 }
 
-/* line 39, ../compass/sass/styles.scss */
+@media screen and (max-width: 767px) {
+  /* line 41, ../compass/sass/styles.scss */
+  li.navbar-text {
+    margin-left: 15px;
+  }
+}
+/* line 46, ../compass/sass/styles.scss */
 .username {
   padding-top: 15px;
   color: #737373;
 }
 
-/* line 44, ../compass/sass/styles.scss */
+/* line 51, ../compass/sass/styles.scss */
 body {
   background-color: white;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   font-family: 'Crete Round', serif;
-  padding-bottom: 70px;
 }
 
-/* line 51, ../compass/sass/styles.scss */
-.navbar-fixed-bottom {
+/* line 57, ../compass/sass/styles.scss */
+footer {
+  bottom: 0;
+  position: absolute;
   width: 100%;
   background-color: #F8F8F8;
-  height: 50px;
+  height: 60px;
 }
-/* line 55, ../compass/sass/styles.scss */
-.navbar-fixed-bottom p {
-  line-height: 50px;
+/* line 63, ../compass/sass/styles.scss */
+footer p {
+  line-height: 60px;
+  font-size: 15px;
 }

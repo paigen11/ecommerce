@@ -8,13 +8,13 @@ var accountSchema = new Schema({
 	token: String,
 	tokenExpDate: Date,
 	frequency: String,
-	total: String,
-	fullName: {type: String, required: true},
-	address1: {type: String, required: true},
+	total: Number,
+	fullName: String,
+	address1: String,
 	address2: String,
-	city: {type: String, required: true},
-	state: {type: String, required: true},
-	zipCode: {type: String, required: true}
+	city: String,
+	state: String,
+	zipCode: String
 });
 
 module.exports = mongoose.model('Account', accountSchema);

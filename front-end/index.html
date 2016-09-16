@@ -24,6 +24,8 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+	<script src="https://checkout.stripe.com/checkout.js"></script>
+
 	<script src="js/javascript.js"></script>
 
 	<link href="https://fonts.googleapis.com/css?family=Crete+Round|Droid+Serif:700" rel="stylesheet">
@@ -51,8 +53,8 @@
 				<ul class='nav navbar-nav navbar-right'>
 					<li ng-hide='hi'><a ng-href='#/register'>Register Now</a></li>
 					<li ng-hide='hi'><a ng-href='#/login'>Log In</a></li>
-					<li ng-show='hi'><a ng-href='#/logout'>Log Out</a></li>
-					<li class='navbar-text' ng-show='hi'>Hi {{username}}</li>
+					<li ng-show='hi'><a ng-click='logout()'>Log Out</a></li>
+					<li class='navbar-text' ng-show='hi'></li>
 				</ul>	
 			</div>
 		</div>	
@@ -61,13 +63,13 @@
 	<div id='views' ng-view></div>
 </div>
 
-<div class='navbar navbar-fixed-bottom'>
+<footer>
 	<div class='container-fluid'>
         <div class="col-xs-12 text-center">
-          <p>Made in Atlanta | Copyright &copy;2016</p>
+          <p>Made by Paige Niedringhaus | Copyright &copy;2016</p>
         </div>
 	</div>
-</div>
+</footer>
 
 </body>
 </html>

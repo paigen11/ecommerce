@@ -74,6 +74,9 @@ p{
 .get-flowers{
 	background-image: url(../../compass/images/vase-flowers.jpg);
 	background-size: cover;
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	background-position: center;
 	height:700px;
 	& p{
 		padding-left: 10%;

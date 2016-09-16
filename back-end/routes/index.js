@@ -8,6 +8,10 @@ mongoose.connect(mongoUrl);
 var bcrypt = require('bcrypt-nodejs');
 var randToken = require('rand-token').uid;
 
+//this is our config module, we have access to config.secretTestKey
+var config = require('../config/config'); 
+var stripe = require('stripe')(config.secretTestKey);
+
 router.post('/register', function(req, res, next){
 	Account.findOne(
 		{username: req.body.username},
@@ -40,6 +44,7 @@ router.post('/register', function(req, res, next){
 					});
 
 					accountToAdd.save(function(error, documentAdded){
+						console.log(error);
 						if(error){
 							res.json({
 								message: 'errorAdding'
@@ -55,9 +60,7 @@ router.post('/register', function(req, res, next){
 				}				
 			}
 		})
-
-
-})
+});
 
 router.post('/login', function(req, res, next){
 	Account.findOne(
@@ -100,10 +103,6 @@ router.post('/login', function(req, res, next){
 	)
 });
 
-router.post('/logout', function(req, res, next){
-	Account.findOne({username: req.body.username}).remove({token: req.body.token}).exec();
-})
-
 router.post('/options', function(req, res, next){
 	Account.update(
 		{token: req.body.token}, //this is the droid we're looking for
@@ -133,39 +132,9 @@ router.post('/delivery', function(req, res, next){
 	});
 });
 
-router.get('/payment', function(req, res, next){
-	console.log($cookies.username);
-	console.log('test');
-	Account.findOne({
-		username: $cookies.username
-	},
-	function(error, document){
-		if(document != null){
-			res.json({
-				frequency: document.frequency,
-				fullName: document.fullName,
-				address1: document.address1,
-				address2: document.address2,
-				city: document.city,
-				state: document.state,
-				zipCode: document.zipCode
-				// total: document.total
-			})
-		}
-
-	})
-})	
-
 router.get('/getUserData', function(req, res, next){
 	var userToken = req.query.token; //equal to the XXXXX in ?token=XXXXX
-	// var tokenExpDate;
-	// Account.findOne(
-	// 	{tokenExpDate: tokenExpDate},
-	// 	function(error, document){
-	// 		tokenExpDate = document.tokenExpDate;
-	// 	}
-	// )
-	// console.log(tokenExpDate);
+
 	if(userToken == undefined){
 		//no token was supplied
 		res.json({failure: "noToken"});
@@ -173,24 +142,34 @@ router.get('/getUserData', function(req, res, next){
 		Account.findOne(
 			{token: userToken}, //this is the droid we're looking for
 			function(error, document){
-				// if(userToken >= tokenExpDate){
-				// 	//this token is expired - time to login in again
-				// 	res.json({failure: 'expiredToken'});
-				// } else 
-					if(document == null){
+				if(document == null){
 					//this token is not in the system
 					res.json({failure: 'badToken'}); //Angular will need to act on this information ie. send them to the login page
 				}else{
 					res.json({
-						username: document.username,
-						frequency: document.frequency,
-						total: document.total,
-						token: document.token
+						document
 					});
 				}
 			}
 		)
 	}
+});
+
+router.post('/stripe', function(req, res, next){
+	stripe.charges.create({
+		amount: req.body.amount,
+		currency: 'usd',
+		source: req.body.stripeToken
+	}).then(function(charge){
+		res.json({
+			success: 'paid'
+		});
+	}, function(err){
+		res.json({
+			failure: 'failedPayment',
+			error: err
+		});
+	});
 });
 
 module.exports = router;

@@ -11,46 +11,75 @@
 				<h3>Flower Order Details</h3>
 			</div>
 			<div class='form-group pay'>
-				<label for='frequency' class='col-sm-2 control-label'>Delivery Frequency: </label>
-				<div ng-model='frequency'>{{frequency}}</div>
+				<label for='frequency' class='col-sm-3 control-label'>Delivery Frequency: </label>
+				<div>
+					<p>{{userInfo.document.frequency}}</p>
+				</div>
 			</div>
 
 			<div class='form-group pay'>
 				<h3>Shipping Details</h3>
 			</div>
 			<div class='form-group pay'>
-				<label for='fullName' class='col-sm-2 control-label'>Full Name: </label>
-				<div ng-model='fullName'>{{fullName}}</div>
+				<label for='fullName' class='col-sm-3 control-label'>Full Name: </label>
+				<div>
+					<p>{{userInfo.document.fullName}}</p>
+				</div>
 			</div>
 			<div class='form-group pay'>
-				<label for='address1' class='col-sm-2 control-label'>Address: </label>
-				<div ng-model='address1'>{{address1}}</div>
+				<label for='address1' class='col-sm-3 control-label'>Address: </label>
+				<div>
+					<p>{{userInfo.document.address1}}</p>
+				</div>
 			</div>
 			<div class='form-group pay'>
-				<label for='address2' class='col-sm-2 control-label'>Address 2: </label>
-				<div ng-model='address2'>{{address2}}</div>
+				<label for='address2' class='col-sm-3 control-label'>Address 2: </label>
+				<div>
+					<p>{{userInfo.document.address2}}</p>
+				</div>
 			</div>
 			<div class='form-group pay'>
-				<label for='city' class='col-sm-2 control-label'>City: </label>
-				<div ng-model='city'>{{city}}</div>
+				<label for='city' class='col-sm-3 control-label'>City: </label>
+				<div>
+					<p>{{userInfo.document.city}}</p>
+				</div>
 			</div>
 			<div class='form-group pay'>
-				<label for='state' class='col-sm-2 control-label'>State: </label>
-				<div ng-model='state'>{{state}}</div>
+				<label for='state' class='col-sm-3 control-label'>State: </label>
+				<div>
+					<p>{{userInfo.document.state}}</p>
+				</div>
 			</div>
 			<div class='form-group pay'>
-				<label for='zipCode' class='col-sm-2 control-label'>Zip Code: </label>
-				<div ng-model='zipCode'>{{zipCode}}</div>
+				<label for='zipCode' class='col-sm-3 control-label'>Zip Code: </label>
+				<div>
+					<p>{{userInfo.document.zipCode}}</p>
+				</div>
 			</div>
 
 			<div class='form-group pay'>
 				<h3>Grand Total</h3>
 			</div>
+
 			<div class='form-group pay'>
-				<label for='total' class='col-sm-2 control-label'>Total: </label>
-				<div ng-model='total'>{{total}}</div>
+				<label for='total' class='col-sm-3 control-label'>Total: </label>
+				<div ng-model='total'>
+					<p>$ {{userInfo.document.total}}</p>
+				</div>
+			</div>
+
+			<div class='button-holder pay text-center'>
+				<button type='submit' class='btn btn-success' ng-click='payOrder()'>Pay For My Order</button>
+			</div>
+
+			<div class='payFor col-sm-6' >
+				<h5>You can pay for your order by using credit card number: 4242 4242 4242 4242, any future expiration date and any three-digit CVC.</h5>
 			</div>
 
 		</form>
+	</div>
+
+	<div class="row paidFor col-sm-6" ng-show="paidFor">
+		<h5>Thanks {{userInfo.document.username}}! Your order has been received.</h5>	
 	</div>
 </div>

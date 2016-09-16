@@ -7,13 +7,42 @@
 	}
 }
 
+@media screen and (max-width: 767px){
+	label{
+		margin-left: 3%;
+	}
+	p{
+		margin-left: 5%
+	}
+}
+
 .form-group.pay{
 	& h3{
 		margin-left: 32px;
 	}
-	& label{
-	color: black;
-	font-family: 'Crete Round', serif;
+	& label, p{
+		color: black;
+		font-family: 'Crete Round', serif;
+	}
+	p{
+		margin-top: 18px;
 	}
 }
+
+.button-holder{
+	margin-bottom: 25px;
+}
+
+.paidFor, .payFor{
+	padding-left: 25px;
+	border: 1px solid grey;
+	background-color: white;
+	border-radius: 5px;
+	padding: 15px;
+	color: grey;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	margin-right: 20px;
+}
+
 

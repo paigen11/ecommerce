@@ -4,6 +4,7 @@
 @import 'views/options';
 @import 'views/delivery';
 @import 'views/payment';
+@import 'views/receipt';
 
 html{
 	position: relative;
@@ -36,6 +37,12 @@ html{
 	padding-top: 15px;
 }
 
+@media screen and (max-width: 767px){
+	li.navbar-text{
+		margin-left: 15px;
+	}
+}
+
 .username{
 	padding-top: 15px;
 	color: hsla(0,0%,45%,1);
@@ -43,17 +50,19 @@ html{
 
 body{
 	background-color: white; 
-	margin-bottom: 80px;
+	margin-bottom: 60px;
 	font-family: 'Crete Round', serif;
-	padding-bottom: 70px;
 }
 
-.navbar-fixed-bottom{
+footer{
+	bottom: 0;
+	position: absolute;
 	width: 100%;
 	background-color: #F8F8F8;
-	height: 50px;
+	height: 60px;
 	& p{
-		line-height:50px;
+		line-height: 60px;
+		font-size: 15px;
 	}
 }
 

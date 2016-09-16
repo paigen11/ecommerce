@@ -1,8 +1,8 @@
 var ecommerceApp = angular.module('eCommerceApp', ['ngRoute', 'ngCookies']);
 ecommerceApp.controller('mainController', function($scope, $rootScope, $http, $timeout, $location, $cookies){
-	
+
 	var apiPath = 'http://localhost:3000';
-	// checkToken();
+	checkToken();
 
 	$scope.register = function(){
 		console.log($scope.username);
@@ -13,7 +13,7 @@ ecommerceApp.controller('mainController', function($scope, $rootScope, $http, $t
 			password2: $scope.password2,
 			email: $scope.email
 		}).then(function successCallback(response){
-			// console.log(response.data);
+			console.log(response.data);
 			if(response.data.name == 'nameTaken'){
 				$scope.nameTaken = true;
 			}
@@ -56,17 +56,19 @@ ecommerceApp.controller('mainController', function($scope, $rootScope, $http, $t
 	};
 
 	$scope.logout = function(){
-		username: $scope.username,
-		$cookies.remove('token');
-		$rootScope.hi = false;
-		console.log('token');
-	}
+			$cookies.remove('token');
+			$cookies.remove('username');
+			$rootScope.hi = false;
+			$location.path('/');
+			console.log($cookies.get('token'));
+			console.log($cookies.get('username'));
+	};
 
 	$scope.flowersWeekly = function(){
 		$http.post(apiPath + '/options', {
 			token: $cookies.get('token'),
-			frequency: 'weekly',
-			total: '$140'
+			frequency: 'Weekly',
+			total: 140.00
 		}).then(function successCallback(response){
 			if(response.data.post == 'optionAdded'){
 				$scope.choiceMade = true;
@@ -82,8 +84,8 @@ ecommerceApp.controller('mainController', function($scope, $rootScope, $http, $t
 	$scope.flowersMonthly = function(){
 		$http.post(apiPath + '/options', {
 			token: $cookies.get('token'),
-			frequency: 'monthly',
-			total: '$50'
+			frequency: 'Monthly',
+			total: 50.00
 		}).then(function successCallback(response){
 			if(response.data.post == 'optionAdded'){
 				$scope.choiceMade = true;
@@ -118,45 +120,73 @@ ecommerceApp.controller('mainController', function($scope, $rootScope, $http, $t
 		})	
 	};
 
-	$scope.$watch(function(){
-		return $location.path();
-	}, function(newPath){
-		if(newPath == '/payment'){
-			console.log('hello');
-			$http.get(apiPath + '/payment', {}).then(function successCallback(response){
-				$scope.fullname = response.data.fullName;
-				console.log(response.data.fullName);
-				console.log(response);
-			}), function errorCallback(response){
+	$scope.payOrder = function() {
+        $scope.errorMessage = "";
+        var handler = StripeCheckout.configure({
+            key: 'pk_test_W8jeyVqgTWajOCfvSR4FaJ0k',
+            image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
+            locale: 'auto',
+            token: function(token) {
+                console.log("The token Id is: ");
+                console.log(token.id);
+                console.log($cookies.get('total'));
+
+                $http.post(apiPath + '/stripe', {
+                    amount: $cookies.get('total') * 100,
+                    stripeToken: token.id,
+                    token: $cookies.get('token')
+                        //This will pass amount, stripeToken, and token to /payment
+                }).then(function successCallback(response) {
+                    console.log(response.data);
+                    if (response.data.success) {
+                        $scope.paidFor = true;
+                     //    $timeout(function(){
+                     //    	$location.path('/receipt');
+                    	// }, 2000);
+                    } else {
+                        $scope.errorMessage = response.data.message;
+                        //same on the checkout page
+                    }
+                }, function errorCallback(response) {});
+            }
+        })
+        handler.open({
+            name: 'Flowers Galore',
+            description: 'Brightening the world, one bloom at a time',
+            amount: $scope.userInfo.document.total * 100
+        });
+    };
+
+
+	function checkToken(){
+		if(($cookies.get('token') != undefined)){	
+			$http.get(apiPath + '/getUserData?token=' + $cookies.get('token'),{
+			}).then(function successCallback(response){
+				//response.data.xxxx = whatever res.json was in express
+				if(response.data.failure == 'badToken'){
+					console.log('badToken - this token is not in the system')
+					$location.path('/login'); //goodbye, go log in again. token is expired or fake
+				}else if(response.data.failure == 'noToken'){
+					console.log('noToken - the user has no token, they cannot be here')
+					$location.path('/login'); //no token. goodbye - log in again
+				}else{
+					//the token is good. Response.data will have their stuff in it
+					$cookies.put('total', response.data.document.total);
+					$scope.username = response.data.document.username;
+					$('.navbar-text').text('Hi ' + $scope.username);
+					$scope.userInfo = response.data;
+					$rootScope.hi = true;
+					if(($location.path() == '/') || ($location.path() == '/register') || (location.path == '/login')){
+						$location.path('/options');
+						}
+					}	
+				}), function errorCallback(response){
 
 			};
-		}
-	})
-
-
-	// // function checkToken(){
-	// 	// if($cookies.get('token') != null) {
-	// 		$http.get(apiPath + '/getUserData?token=' + $cookies.get('token'))
-	// 		.then(function successCallback(response){
-	// 			// console.log(response.data.failure);
-	// 			//response.data.xxxx = whatever res.json was in express
-	// 			if(response.data.failure == 'badToken'){
-	// 				$location.path = '/login' //goodbye, go log in again. token is expired or fake
-	// 			}else if(response.data.failure == 'noToken'){
-	// 				$location.path = '/login' //no token. goodbye - log in again
-	// 			// }else if(response.data.failure == 'expiredToken'){
-	// 			// 	$location.path = '/login' //expired token. log in again
-	// 			}else{
-	// 				//the token is good. Response.data will have their stuff in it
-	// 				$scope.username = response.data.username;
-	// 				$rootScope.hi = true;
-	// 				//send them to an account page or somewhere
-	// 				}	
-	// 			}), function errorCallback(response){
-
-	// 		};
-	// 	// };
-	// // };			
+		}else if(($location.path() != '/') && ($location.path() != '/register') && ($location.path() != '/login') && ($cookies.get('token') == undefined)){
+			$location.path('/login');
+		};
+	};			
 
 });
 
@@ -185,6 +215,10 @@ ecommerceApp.config(function($routeProvider){
 	})
 	.when('/payment', {
 		templateUrl: 'views/payment.html',
+		controller: 'mainController'
+	})
+	.when('/receipt', {
+		templateUrl: 'views/receipt.html',
 		controller: 'mainController'
 	})
 	.otherwise({

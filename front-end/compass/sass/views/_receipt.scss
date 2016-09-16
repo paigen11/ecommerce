@@ -1,0 +1,15 @@
+.receipt{
+	background-image: url(../compass/images/receipt-page.jpg);
+	background-size: cover;
+	margin-top: 80px;
+	height: 800px;
+	& h1{
+		font-family: 'Droid Serif', serif;
+		color: white;
+	}
+	& h3{
+		color: white;
+		font-family: 'Crete Round', serif;
+	}
+
+}
