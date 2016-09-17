@@ -61,11 +61,11 @@ So, when customers come to the site they can register / login, order weekly or m
 ---
 There's a ton of requirements for this - apologies in advance.
 
-For the front end of the site, Twitter's [Bootstrap](http://getbootstrap.com/getting-started/) framework was used in conjunction with [AngularJS](https://angularjs.org/), and the Angular modules of [ngCookies and ngRoutes](https://code.angularjs.org/1.5.8/). Since Bootstrap's JavaScript files were employed for site responsiveness, Google's [jQuery](https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js) script is also needed. Styling was down with SASS through [Compass](http://compass.kkbox.com/). This is optional, but it makes the styling process quicker.
+For the front end of the site, Twitter's [Bootstrap](http://getbootstrap.com/getting-started/) framework was used in conjunction with [AngularJS](https://angularjs.org/), and the Angular modules of [ngCookies and ngRoutes](https://code.angularjs.org/1.5.8/). Since Bootstrap's JavaScript files were employed for site responsiveness, Google's [jQuery](https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js) script is also needed. Styling was done with SASS through [Compass](http://compass.kkbox.com/). This is optional, but it makes the styling process quicker.
 
 To set this up on the back end of the site, [Node.js](https://docs.npmjs.com/getting-started/installing-node), [expressjs](http://expressjs.com/), [Mongoose](http://mongoosejs.com/), [bCrypt](https://www.npmjs.com/package/bcrypt), [rand-token](https://www.npmjs.com/package/rand-token) and [Stripe](https://stripe.com/docs/libraries) need to be downloaded with --save behind their install commands to save them to the package.json dependencies. 
 
-In addition to all these downloads, you'll need to create an account with Stripe to get custom access keys for the payment processing.
+In addition to all these downloads, you'll need to create an account with Stripe to get custom access keys for the payment processing. Once the account's created, go to Account, then click on API keys to get the codes.
 
 ##Code Examples
 ---
@@ -99,7 +99,9 @@ $scope.register = function(){
 			console.log(response);
 			
 		})
-	};```
+	};
+```
+
 
 Function within the AngularJS front end controller that checks a user's cookies to see if they have a token for the site (meaning they've visited before). If the token exists but there's something wrong, customers are routed to the login page, or if they don't have a token stored in their cookies, the only pages they can access are the home page, the login page or the register page. All other pages are behind a gate requiring the token (which is checked again when each page view changes). 
 
@@ -132,7 +134,8 @@ function checkToken(){
 		}else if(($location.path() != '/') && ($location.path() != '/register') && ($location.path() != '/login') && ($cookies.get('token') == undefined)){
 			$location.path('/login');
 		};
-	};```			
+	};			
+```
 
 
 Back end NodeJS JavaScript updating the customer's account with their flower delivery information entered on the front end of the site.
@@ -151,7 +154,8 @@ router.post('/delivery', function(req, res, next){
 		res.json({
 		post: 'addressAdded'
 	});
-});```	
+});
+```	
 
 ##Additional Improvements
 ---
