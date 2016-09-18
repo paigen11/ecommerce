@@ -2,6 +2,10 @@
 ---
 An ecommerce flower delivery site built in Node.js, Express, MongoDB, Mongoose and AngularJS: the full MEAN stack. The front end is entirely Angular.JS, HTML5 and CSS3 (styled using SASS). The back end is a custom API driven by Express.io and MongoDB (accessed through Mongoose) in Node.js, with integration of bCrypt and rand-token for password protection and the Stripe payment API for payment processing. 
 
+##Live demo
+---
+[Live demo](tbd)
+
 ##Languages Used
 ---
   * HTML5
