@@ -57,6 +57,8 @@ For the back end, a Node index.js file handles all of the requirements: Express,
 
 So, when customers come to the site they can register / login, order weekly or monthly deliveries of flowers, enter their delivery information and pay securely through the Stripe API. They can also logout at any time, or leave the site without logging out and when they return they'll be logged back in through the use of local cookies. Little customized messages along the way, help the customer know their actions are received and successfully processed, until they get to the end of the process and their orders are complete.
 
+There were many obstacles encountered during this project. Getting the front and back end to pass information between them was a daunting task, and then integrating the Stripe API successfully was not the easiest thing either. 
+
 ##Requirements
 ---
 There's a ton of requirements for this - apologies in advance.

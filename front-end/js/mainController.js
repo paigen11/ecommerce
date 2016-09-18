@@ -140,9 +140,9 @@ ecommerceApp.controller('mainController', function($scope, $rootScope, $http, $t
                     console.log(response.data);
                     if (response.data.success) {
                         $scope.paidFor = true;
-                     //    $timeout(function(){
-                     //    	$location.path('/receipt');
-                    	// }, 2000);
+                        $timeout(function(){
+                        	$location.path('/receipt');
+                    	}, 2000);
                     } else {
                         $scope.errorMessage = response.data.message;
                         //same on the checkout page
