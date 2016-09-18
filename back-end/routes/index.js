@@ -4,6 +4,7 @@ var mongoose = require('mongoose');
 var mongoUrl = 'mongodb://localhost:27017/ecommerce';
 var Account = require('../models/accounts');
 mongoose.connect(mongoUrl);
+
 // include bcrypt to store hashed pass
 var bcrypt = require('bcrypt-nodejs');
 var randToken = require('rand-token').uid;
@@ -131,6 +132,7 @@ router.post('/delivery', function(req, res, next){
 		post: 'addressAdded'
 	});
 });
+
 
 router.get('/getUserData', function(req, res, next){
 	var userToken = req.query.token; //equal to the XXXXX in ?token=XXXXX
