@@ -57,7 +57,9 @@ For the back end, a Node index.js file handles all of the requirements: Express,
 
 So, when customers come to the site they can register / login, order weekly or monthly deliveries of flowers, enter their delivery information and pay securely through the Stripe API. They can also logout at any time, or leave the site without logging out and when they return they'll be logged back in through the use of local cookies. Little customized messages along the way, help the customer know their actions are received and successfully processed, until they get to the end of the process and their orders are complete.
 
-There were many obstacles encountered during this project. Getting the front and back end to pass information between them was a daunting task, and then integrating the Stripe API successfully was not the easiest thing either. 
+There were many obstacles encountered during this project. Getting the front and back end to pass information between them was a daunting task, and then integrating the Stripe API successfully was not the easiest thing either. Ensuring information was passed from where the customer entered it involved a lot of trial and error and console logging on both sides to see what came back, and then readjusting and trying again. 
+
+As for the Stripe API, while it should have been able to use the same code from the object displaying the total to charge the customer, the API wasn't having it and kept giving a 'payment failed' message. The solution came in the form of storing the total amount to pay as a cookie on the computer as well, thus the function was able to grab the cookie and successfully send it back to Stripe for payment processing.
 
 ##Requirements
 ---
@@ -161,7 +163,6 @@ router.post('/delivery', function(req, res, next){
 
 ##Additional Improvements
 ---
-  * An edit/cancel button during the checkout process
   * A customizable flower option where customers can select different delivery frequencies, specific flower types, etc.
   * A shopping cart so customers can make multiple orders at one time, if desired
   * An account profile view (with past orders displayed)

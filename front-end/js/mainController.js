@@ -4,6 +4,7 @@ ecommerceApp.controller('mainController', function($scope, $rootScope, $http, $t
 	var apiPath = 'http://localhost:3000';
 	checkToken();
 
+	//registration page 
 	$scope.register = function(){
 		console.log($scope.username);
 		//post request sending these 4 variables to the database
@@ -33,6 +34,7 @@ ecommerceApp.controller('mainController', function($scope, $rootScope, $http, $t
 		})
 	};
 
+	//login page
 	$scope.login = function(){
 		$http.post(apiPath + '/login', {
 			username: $scope.username,
@@ -55,6 +57,7 @@ ecommerceApp.controller('mainController', function($scope, $rootScope, $http, $t
 		})
 	};
 
+	//logout function (no page, so no ng-href)
 	$scope.logout = function(){
 			$cookies.remove('token');
 			$cookies.remove('username');
@@ -64,6 +67,7 @@ ecommerceApp.controller('mainController', function($scope, $rootScope, $http, $t
 			console.log($cookies.get('username'));
 	};
 
+	//if a customer selects weekly flowers option
 	$scope.flowersWeekly = function(){
 		$http.post(apiPath + '/options', {
 			token: $cookies.get('token'),
@@ -81,6 +85,7 @@ ecommerceApp.controller('mainController', function($scope, $rootScope, $http, $t
 		})
 	};
 
+	//if a customer selects monthly flowers option
 	$scope.flowersMonthly = function(){
 		$http.post(apiPath + '/options', {
 			token: $cookies.get('token'),
@@ -98,6 +103,7 @@ ecommerceApp.controller('mainController', function($scope, $rootScope, $http, $t
 		})
 	}
 
+	//delivery page to collect customer address
 	$scope.address = function(){
 		$http.post(apiPath + '/delivery', {
 			username: $scope.username,
@@ -120,6 +126,7 @@ ecommerceApp.controller('mainController', function($scope, $rootScope, $http, $t
 		})	
 	};
 
+	//Stripe checkout API
 	$scope.payOrder = function() {
         $scope.errorMessage = "";
         var handler = StripeCheckout.configure({
@@ -157,7 +164,12 @@ ecommerceApp.controller('mainController', function($scope, $rootScope, $http, $t
         });
     };
 
+    //edit order
+    $scope.editOrder = function(){
+    	$location.path('/options');
+    };
 
+    //check if user has token from previous visit on computer and log them in if they do
 	function checkToken(){
 		if(($cookies.get('token') != undefined)){	
 			$http.get(apiPath + '/getUserData?token=' + $cookies.get('token'),{
