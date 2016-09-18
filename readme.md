@@ -26,28 +26,28 @@ Paige Niedringhaus
 ##Screenshots
 ---
 Start screen when customers come to the site for the first time
-![alt text]()
+![alt text](https://github.com/paigen11/ecommerce/tree/master/screenshots/home-page.png 'home-page.png')
 
 New customer register screen
-![alt text]()
+![alt text](https://github.com/paigen11/ecommerce/tree/master/screenshots/register-page.png 'register-page.png')
 
 Returning customer login screen
-![alt text]()
+![alt text](https://github.com/paigen11/ecommerce/blob/master/screenshots/login-page.png 'login-page.png')
 
 Flower options selection page
-![alt text]()
+![alt text](https://github.com/paigen11/ecommerce/tree/master/screenshots/options-page.png 'options-page.png')
 
 Delivery options page
-![alt text]()
+![alt text](https://github.com/paigen11/ecommerce/tree/master/screenshots/delivery-page.png 'delivery-page.png')
 
 Order review and payment page
-![alt text]()
+![alt text](https://github.com/paigen11/ecommerce/tree/master/screenshots/payment-page.png 'payment-page.png')
 
 Stripe API payment modal
-![alte text]()
+![alte text](https://github.com/paigen11/ecommerce/tree/master/screenshots/stripe-modal.png 'stripe-modal.png')
 
 Payment receipt page after payment's approved
-![alt text]()
+![alt text](https://github.com/paigen11/ecommerce/tree/master/screenshots/receipt-page.png 'receipt-page.png')
 
 ##Further Info
 ---
