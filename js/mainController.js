@@ -188,7 +188,7 @@ ecommerceApp.controller('mainController', function($scope, $rootScope, $http, $t
 					$('.navbar-text').text('Hi ' + $scope.username);
 					$scope.userInfo = response.data;
 					$rootScope.hi = true;
-					if(($location.path() == '/') || ($location.path() == '/register') || (location.path() == '/login')){
+					if(($location.path() == '/') || ($location.path() == '/register') || ($location.path() == '/login')){
 						$location.path('/options');
 						}
 					}	
