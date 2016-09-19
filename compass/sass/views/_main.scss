@@ -4,7 +4,7 @@
 }
 
 .jumbotron{
-	background-image: url(../compass/images/table-flowers.jpg);
+	background-image: url(/ecommerce/compass/images/table-flowers.jpg);
 	background-size: cover;
 	& h1, p{
 		color: white;
@@ -37,7 +37,7 @@ p{
 }
 
 .choose-flowers{
-	background-image: url(../../compass/images/new-flowers.png);
+	background-image: url(/ecommerce/compass/images/new-flowers.png);
 	background-size: cover;
 	height:400px;
 	& h3, p{
@@ -72,7 +72,7 @@ p{
 	}
 
 .get-flowers{
-	background-image: url(../../compass/images/vase-flowers.jpg);
+	background-image: url(/ecommerce/compass/images/vase-flowers.jpg);
 	background-size: cover;
 	background-size: auto 100%;
 	background-repeat: no-repeat;
