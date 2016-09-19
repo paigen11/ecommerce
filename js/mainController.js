@@ -1,7 +1,7 @@
 var ecommerceApp = angular.module('eCommerceApp', ['ngRoute', 'ngCookies']);
 ecommerceApp.controller('mainController', function($scope, $rootScope, $http, $timeout, $location, $cookies){
 
-	var apiPath = 'http://paigeniedringhaus.com:3000/';
+	var apiPath = 'http://paigeniedringhaus.com:3000';
 	checkToken();
 
 	//registration page 
