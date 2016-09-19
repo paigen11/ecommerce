@@ -4,7 +4,7 @@ An ecommerce flower delivery site built in Node.js, Express, MongoDB, Mongoose a
 
 ##Live demo
 ---
-[Live demo](tbd)
+[Live demo](http://paigeniedringhaus.com/ecommerce/#/)
 
 ##Languages Used
 ---
