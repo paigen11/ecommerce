@@ -5,7 +5,7 @@
 
 /* line 6, ../compass/sass/views/_main.scss */
 .jumbotron {
-  background-image: url(ecommerce/compass/images/table-flowers.jpg);
+  background-image: url(../compass/images/table-flowers.jpg);
   background-size: cover;
 }
 /* line 9, ../compass/sass/views/_main.scss */
@@ -46,7 +46,7 @@ p {
 
 /* line 39, ../compass/sass/views/_main.scss */
 .choose-flowers {
-  background-image: url(ecommerce/compass/images/new-flowers.png);
+  background-image: url(../compass/images/new-flowers.png);
   background-size: cover;
   height: 400px;
 }
@@ -90,7 +90,7 @@ p {
 
 /* line 74, ../compass/sass/views/_main.scss */
 .get-flowers {
-  background-image: url(ecommerce/compass/images/vase-flowers.jpg);
+  background-image: url(../compass/images/vase-flowers.jpg);
   background-size: cover;
   background-size: auto 100%;
   background-repeat: no-repeat;
