@@ -20,6 +20,13 @@ html{
 	}
 }
 
+@media screen and (max-width: 375px){
+	.navbar-header{
+		margin-left: 25%;
+		margin-top: 92px
+	}
+}
+
 #navbar-collapse-1.navbar-collapse{
 	border: none;
 }

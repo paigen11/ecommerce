@@ -44,6 +44,12 @@ p {
   margin-top: -15px;
 }
 
+@media screen and (max-width: 375px){
+  .nav .navbar-header{
+    margin-left: 25%;
+    }
+}
+
 /* line 39, ../compass/sass/views/_main.scss */
 .choose-flowers {
   background-image: url(../compass/images/new-flowers.png);
