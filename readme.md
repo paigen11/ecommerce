@@ -1,12 +1,8 @@
-#What is it?
+What is it?
 ---
 An ecommerce flower delivery site built in Node.js, Express, MongoDB, Mongoose and AngularJS: the full MEAN stack. The front end is entirely Angular.JS, HTML5 and CSS3 (styled using SASS). The back end is a custom API driven by Express.io and MongoDB (accessed through Mongoose) in Node.js, with integration of bCrypt and rand-token for password protection and the Stripe payment API for payment processing. 
 
-##Live demo
----
-[Live demo](http://paigeniedringhaus.com/ecommerce/#/)
-
-##Languages Used
+Languages Used
 ---
   * HTML5
   * CSS3 (and SASS)
@@ -19,15 +15,15 @@ An ecommerce flower delivery site built in Node.js, Express, MongoDB, Mongoose a
   * Mongoose
   * Stripe API
 
-##Link to Github
+Link to Github
 ---
 [Github](https://github.com/paigen11/ecommerce)
 
-##Authors
+Authors
 ---
 Paige Niedringhaus
 
-##Screenshots
+Screenshots
 ---
 Start screen when customers come to the site for the first time
 ![alt text](https://github.com/paigen11/ecommerce/blob/master/screenshots/home-page.png 'home-page.png')
@@ -53,7 +49,7 @@ Stripe API payment modal
 Payment receipt page after payment's approved
 ![alt text](https://github.com/paigen11/ecommerce/blob/master/screenshots/receipt-page.png 'receipt-page.png')
 
-##Further Info
+Further Info
 ---
 On the front end, the site is built using one AngularJS controller that controls all the routes and views for everything. The site is set up on the Twitter Bootstrap framework, then custom styled using SASS through Compass. Each view (page) has its own separate SCSS view that's compiled into the main SASS file. 
 
@@ -65,7 +61,7 @@ There were many obstacles encountered during this project. Getting the front and
 
 As for the Stripe API, while it should have been able to use the same code from the object displaying the total to charge the customer, the API wasn't having it and kept giving a 'payment failed' message. The solution came in the form of storing the total amount to pay as a cookie on the computer as well, thus the function was able to grab the cookie and successfully send it back to Stripe for payment processing.
 
-##Requirements
+Requirements
 ---
 There's a ton of requirements for this - apologies in advance.
 
@@ -75,7 +71,7 @@ To set this up on the back end of the site, [Node.js](https://docs.npmjs.com/get
 
 In addition to all these downloads, you'll need to create an account with Stripe to get custom access keys for the payment processing. Once the account's created, go to Account, then click on API keys to get the codes.
 
-##Code Examples
+Code Examples
 ---
 AngularJS JavaScript that takes customer registration information and passed it through to the back end. It also displays messages if the username is already taken, and if the customer successfully registers it passes them along to the flower option page.
 
@@ -165,7 +161,7 @@ router.post('/delivery', function(req, res, next){
 });
 ```	
 
-##Additional Improvements
+Additional Improvements
 ---
   * A customizable flower option where customers can select different delivery frequencies, specific flower types, etc.
   * A shopping cart so customers can make multiple orders at one time, if desired
